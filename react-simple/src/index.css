@@ -1,0 +1,16 @@
+.search-bar {
+    margin: 42px;
+}
+
+.search-bar input {
+    width: 75%;
+    margin: 0 auto;
+}
+
+li {
+    cursor: pointer;
+}
+
+.embed-responsive {
+    margin-bottom: 20px;
+}
