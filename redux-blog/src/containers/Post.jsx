@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getPost } from '../actions'
 
-const Post = () => (
-  <div className="post">
-  </div>
-)
+class Post extends Component {
+  componentDidMount() {
+    this.props.getPost(this.props.params.id)
+  }
 
-export default Post
+  render() {
+    return (
+      <article>
+        <h1>{this.props.post.title}</h1>
+        <p>{this.props.post.content}</p>
+      </article>
+    )
+  }
+}
+
+export default connect(
+  ({ selected }) => ({post: selected}),
+  { getPost }
+)(Post)

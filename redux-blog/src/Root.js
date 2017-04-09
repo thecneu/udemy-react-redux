@@ -13,6 +13,7 @@ const Root = () => (
         <Route path="posts/:id" component={Post} />
       </Route>
       <Redirect from="/" to="posts" />
+      <Redirect from="/*" to="posts" />
   </Router>
 )
 
